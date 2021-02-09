@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>diaries</title>
     <link href="diary.css" rel="stylesheet" type="text/css">
-    <link href="transition.css" rel="stylesheet" type="text/css">
+    <link href="main.css" rel="stylesheet" type="text/css">
   </head>
   <body>
 <div class="transition transition-1 is-active"></div>
@@ -17,22 +17,19 @@
  </div>
 
  <nav>
-  <div class="menu">
-
-   <div class="homepage">
-    <a href="homepage.html">Home</a>
-   </div>
-   <div class="reviews">
-    <a href="reviews.html">Reviews</a>
-   </div>
-   <div class="Diary">
-    <a href="diary.html">Diary</a>
-   </div>
-   <div class="Quiz">
-    <a href="quiz.html">Quiz</a>
-   </div>
+   <div id="mySidenav" class="sidenav">
+    <div class="menu">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="homepage.html">Home</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="diary.html">Diary</a>
+      <a href="quiz.html">Quiz</a>
+    </div>
   </div>
  </nav>
+</div>
+<div class="openbutton">
+  <span style="font-size:30px;cursor:pointer;font-family:cursive;" onclick="openNav()">&#9776; menu</span>
 </div>
 
 <script src="main.js"></script>

@@ -68,3 +68,14 @@ function myFunction() {
     }
   }
 }
+
+
+if(window.innerWidth > 540){
+  function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+}
