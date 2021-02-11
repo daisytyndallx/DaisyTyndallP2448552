@@ -8,6 +8,7 @@
     <link href="main.css" rel="stylesheet" type="text/css">
   </head>
   <body>
+
 <div class="transition transition-1 is-active"></div>
 
 <div class="wrapper">
@@ -16,10 +17,104 @@
    <img src="Image/daisydiaries.png">
  </div>
 
+ <div class="book">
+     <input type="checkbox" id="c1">
+     <input type="checkbox" id="c2">
+     <input type="checkbox" id="c3">
+     <input type="checkbox" id="c4">
+     <input type="checkbox" id="c5">
+     <input type="checkbox" id="c6">
+    <div class="cover"id="cover"><img src="Image/Screenshot 2021-02-07 at 13.19.07.png"></div>
+   <div class="flip-book">
+      <div class="flip" id="p1">
+        <div class="front">
+          <h1>Daisys</h1>
+          <h1>LockDown</h1>
+          <h1>Diary</h1>
+
+          <label class="next-btn" for="c1">Next</label>
+        </div>
+        <div class="back">
+          <img src="Image/Screenshot 2021-02-07 at 19.13.03.png">
+          <label class="back-btn" for="c1">Back</label>
+        </div>
+      </div>
+      <div class="flip" id="p2">
+        <div class="front">
+          <h2>Baking</h2>
+          <p> kscvsb vadjkfb adfjkbv adfjkbv adfjbv  adfhbv adfbkv adfhjkv a
+              sdflgv fdsjnv sfjn sfjn sjfnv rsoinfjv srfjnv sdnv soedlknxv
+              sdkjnfvmsdknlv
+          </p>
+          <label class="next-btn" for="c2">Next</label>
+        </div>
+        <div class="back">
+          <img src="Image/Screenshot 2021-02-07 at 19.13.29.png">
+          <label class="back-btn" for="c2">Back</label>
+        </div>
+      </div>
+      <div class="flip" id="p3">
+        <div class="front">
+          <h2>Diet</h2>
+          <p> kscvsb vadjkfb adfjkbv adfjkbv adfjbv  adfhbv adfbkv adfhjkv a
+              sdflgv fdsjnv sfjn sfjn sjfnv rsoinfjv srfjnv sdnv soedlknxv
+              sdkjnfvmsdknlv
+          </p>
+          <label class="next-btn" for="c3">Next</label>
+        </div>
+        <div class="back">
+          <img src="Image/Screenshot 2021-02-07 at 19.13.29.png">
+          <label class="back-btn" for="c3">Back</label>
+        </div>
+      </div>
+      <div class="flip" id="p4">
+        <div class="front">
+          <h2>Snow Fun</h2>
+          <p> kscvsb vadjkfb adfjkbv adfjkbv adfjbv  adfhbv adfbkv adfhjkv a
+              sdflgv fdsjnv sfjn sfjn sjfnv rsoinfjv srfjnv sdnv soedlknxv
+              sdkjnfvmsdknlv
+          </p>
+          <label class="next-btn" for="c4">Next</label>
+        </div>
+        <div class="back">
+          <img src="Image/Screenshot 2021-02-07 at 19.13.29.png">
+          <label class="back-btn" for="c4">Back</label>
+        </div>
+      </div>
+      <div class="flip" id="p5">
+        <div class="front">
+          <h2>3rd Year</h2>
+          <p> kscvsb vadjkfb adfjkbv adfjkbv adfjbv  adfhbv adfbkv adfhjkv a
+              sdflgv fdsjnv sfjn sfjn sjfnv rsoinfjv srfjnv sdnv soedlknxv
+              sdkjnfvmsdknlv
+          </p>
+          <label class="next-btn" for="c5">Next</label>
+        </div>
+        <div class="back">
+          <img src="Image/Screenshot 2021-02-07 at 19.13.29.png">
+          <label class="back-btn" for="c5">Back</label>
+        </div>
+      </div>
+      <div class="flip" id="p6">
+        <div class="front">
+          <h2>TV Shows </h2>
+          <p> kscvsb vadjkfb adfjkbv adfjkbv adfjbv  adfhbv adfbkv adfhjkv a
+              sdflgv fdsjnv sfjn sfjn sjfnv rsoinfjv srfjnv sdnv soedlknxv
+              sdkjnfvmsdknlv
+          </p>
+        </div>
+        <div class="back">
+          <label class="back-btn" for="c6">Back</label>
+        </div>
+      </div>
+   </div>
+
+ </div>
+
  <nav>
    <div id="mySidenav" class="sidenav">
     <div class="menu">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a>
       <a href="homepage.html">Home</a>
       <a href="reviews.html">Reviews</a>
       <a href="diary.html">Diary</a>
@@ -29,9 +124,30 @@
  </nav>
 </div>
 <div class="openbutton">
-  <span style="font-size:30px;cursor:pointer;font-family:cursive;" onclick="openNav()">&#9776; menu</span>
+  <span style="font-size:30px;cursor:pointer;font-family:cursive;" onclick="openNav()">Menu</span>
 </div>
 
-<script src="main.js"></script>
+<script>
+/* Transition JS */
+window.onload = () => {
+const anchors = document.querySelectorAll('a');
+const transition_el = document.querySelector('.transition');
+
+setTimeout(() => {
+  transition_el.classList.remove('is-active');
+}, 750);
+}
+
+/* Menu JS*/
+if(window.innerWidth > 540){
+  function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+}
+</script>
+
   </body>
 </html>

@@ -50,7 +50,7 @@
  <nav>
    <div id="mySidenav" class="sidenav">
     <div class="menu">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a>
       <a href="homepage.html">Home</a>
       <a href="reviews.html">Reviews</a>
       <a href="diary.html">Diary</a>
@@ -60,14 +60,51 @@
  </nav>
  </div>
  <div class="openbutton">
-  <span style="font-size:30px;cursor:pointer;font-family:cursive;" onclick="openNav()">&#9776; open</span>
+  <span style="font-size:30px;cursor:pointer;font-family:cursive;" onclick="openNav()">Menu</span>
  </div>
 
 
+<script>
+ /* Transition JS */
+ window.onload = () => {
+ const anchors = document.querySelectorAll('a');
+ const transition_el = document.querySelector('.transition');
 
+ setTimeout(() => {
+   transition_el.classList.remove('is-active');
+ }, 750);
+ }
 
+ /* Menu JS*/
+ if(window.innerWidth > 540){
+   function openNav() {
+   document.getElementById("mySidenav").style.width = "250px";
+ }
+ function closeNav() {
+   document.getElementById("mySidenav").style.width = "0";
+ }
+ }
 
+ /*Review list JS*/
+ function myFunction() {
+   // Declare variables
+   var input, filter, ul, li, a, i, txtValue;
+   input = document.getElementById('myInput');
+   filter = input.value.toUpperCase();
+   ul = document.getElementById("myUL");
+   li = ul.getElementsByTagName('li');
 
-<script src="main.js"></script>
+   // Loop through all list items, and hide those who don't match the search query
+   for (i = 0; i < li.length; i++) {
+     a = li[i].getElementsByTagName("a")[0];
+     txtValue = a.textContent || a.innerText;
+     if (txtValue.toUpperCase().indexOf(filter) > -1) {
+       li[i].style.display = "";
+     } else {
+       li[i].style.display = "none";
+     }
+   }
+ }
+ </script>
   </body>
 </html>

@@ -1,6 +1,5 @@
 body{
   background-position: center;
-
   text-align: center;
   background-image: url("Image/plain paper rustic.jpg");
   background-attachment: fixed;
@@ -33,7 +32,6 @@ body{
   right: 0;
   bottom: 0;
   z-index: 101;
-
   background-image: url('Image/backgrounddaisy.jpg');
   background-size: contain;
   opacity: 0;
@@ -155,7 +153,7 @@ a {
   font-size: 36px;
   margin-left: 50px;
 }
-.openbutton {
+.openbutton{
   position: absolute;
   top: 0;
   left: 0;
