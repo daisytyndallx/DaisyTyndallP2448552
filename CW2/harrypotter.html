@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8">
+    <title>harrypotter</title>
+    <link href="Quiz.css" rel="stylesheet" type="text/css">
+    <link href="main.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+
+<div class="wrapper">
+
+ <div class="header">
+  <img src="Image/daisydiaries.png">
+ </div>
+
+ <div class="home-box custom-box hide">
+   <h3>Instruction:</h3>
+   <p>Total number of questions: <span class="total-questions">5</span></P>
+   <button type="button" class="btn">Start Quiz</button>
+ </div>
+
+ <div class="quiz-box custom-box">
+   <div class="question-number">
+   </div>
+   <div class="question-text">
+   </div>
+   <div class="option-container">
+   </div>
+   <div class="next-question-btn">
+      <button type="button" class="btn" onclick="next()">Next</button>
+   </div>
+   <div class="answers-indicator">
+   </div>
+ </div>
+
+ <div class="result-box custom-box hide">
+   <h1>Quiz Results</h1>
+   <table>
+     <tr>
+        <td>Total Question</td>
+        <td><span class="total-question">5</span></td>
+     </tr>
+     <tr>
+        <td>Attempt</td>
+        <td><span class="total-attempt">4</span></td>
+     </tr>
+     <tr>
+        <td>Correct</td>
+        <td><span class="total-correct">3</span></td>
+     </tr>
+     <tr>
+        <td>Wrong</td>
+        <td><span class="total-wrong">1</span></td>
+     </tr>
+     <tr>
+        <td>Percentage</td>
+        <td><span class="percentage">60.00%</span></td>
+     </tr>
+     <tr>
+        <td>Your Total Score</td>
+        <td><span class="total-score">3/5</span></td>
+     </tr>
+   </table>
+   <button type="button" class="btn">Try Again</button>
+   <button type="button" class="btn">Go To Home</button>
+ </div>
+
+    <nav>
+      <div id="mySidenav" class="sidenav">
+       <div class="menu">
+         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a>
+         <a href="quiz.html">Quiz</a>
+       </div>
+     </div></nav>
+
+</div>
+<div class="openbutton">
+ <span style="font-size:30px;cursor:pointer;font-family:cursive;" onclick="openNav()">Menu</span>
+</div>
+
+<script>
+
+
+ /* Menu JS*/
+ if(window.innerWidth > 540){
+   function openNav() {
+   document.getElementById("mySidenav").style.width = "250px";
+ }
+ function closeNav() {
+   document.getElementById("mySidenav").style.width = "0";
+ }
+ }
+/* Quiz JS */
+const quiz = [
+ {q: 'What is Harrys Patronas?',
+  options:['Stag','Owl','Snake'],
+  answer:0},
+
+ {q:'What subject does hagrid teach?',
+  options:['Potions','Magical Creatures','Herbology'],
+  answer:1},
+
+ {q: 'What are the Names of Harrys Parents?',
+  options:['Snape & Lilly','Lilly & James','Molly & Arthur'],
+  answer:1},
+
+ {q: 'What was Rons pet rat called?',
+  options:['Flabbers','Scabby','Scabbers'],
+  answer:2},
+
+ {q: 'What is the Killing Curse?',
+  options:['Avada Kedavra','Expeliarmus','Accio'],
+  answer:0},
+]
+
+const questionNumber = document.querySelector(".question-number");
+const questionText = document.querySelector(".question-text");
+const optionContainer = document.querySelector(".option-container");
+
+let questionCounter = 0;
+let currentQuestion;
+let availableQuestions = [];
+let availableOptions = [];
+
+
+/* push the questions into availableQuestion Array*/
+function setAvailableQuestions(){
+  const totalQuestion = quiz.length;
+  for(let i=0; i<totalQuestion; i++){
+    availableQuestions.push(quiz[i])
+  }
+}
+
+
+/* question number and question options */
+function getNewQuestion(){
+  questionNumber.innerHTML = "Question " + (questionCounter + 1) + " of " + quiz.length;
+/*question text, ramdom question*/
+  const questionIndex = availableQuestions[Math.floor(Math.random() * availableQuestions.length)]
+  currentQuestion = questionIndex;
+  questionText.innerHTML = currentQuestion.q;
+/*get the position of questionindex from the avalible questions */
+  const index1= availableQuestions.indexOf(questionIndex);
+  /*remove the questionindex from the avaliblequestion, so that the question does not repeat*/
+    availableQuestions.splice(index1,1);
+    /*set the options*/
+    const optionLen = currentQuestion.options.length
+    for(let i=0; i<optionLen; i++){
+      availableOptions.push(i)
+    }
+    optionContainer.innerHTML = '';
+    let animationDelay = 0.15;
+    /* options HTML*/
+    for(let i=0; i<optionLen; i++){
+      /*ramdom option */
+      const optonIndex = availableOptions[Math.floor(Math.random() * availableOptions.length)];
+      const index2 = availableOptions.indexOf(optonIndex);
+
+      availableOptions.splice(index2,1);
+
+      const option = document.createElement("div");
+      option.innerHTML = currentQuestion.options[optonIndex];
+      option.id = optonIndex;
+      option.style.animationDelay =animationDelay + 's';
+      animationDelay = animationDelay + 0.15;
+      option.className = "option";
+      optionContainer.appendChild(option)
+      option.setAttribute("onclick", "getResult(this)");
+    }
+
+    questionCounter++
+}
+
+/*get the results */
+function getResult(element){
+  const id = parseInt(element.id);
+  /* answer by comparing the id */
+  if(id === currentQuestion.answer){
+     /*set color green*/
+    element.classList.add("correct");
+  }
+  else{
+    /*set color red*/
+    element.classList.add("wrong");
+
+    /*show the correct option*/
+    const optionLen = optionContainer.children.length;
+    for(let i=0; i<optionLen; i++){
+      if(parseInt(optionContainer.children[i].id) === currentQuestion.answer){
+        optionContainer.children[i].classList.add("correct");
+      }
+    }
+  }
+ unclickableOptions();
+}
+
+/* only select one option */
+function unclickableOptions(){
+   const optionLen = optionContainer.children.length;
+   for(let i=0 ; i<optionLen; i++){
+     optionContainer.children[i].classList.add("already-answered");
+   }
+}
+
+function next(){
+  if(questionCounter === quiz.length){
+    console.log("quiz over");
+  }
+  else{
+    getNewQuestion();
+  }
+}
+
+window.onload = function(){
+   setAvailableQuestions();
+   getNewQuestion();
+}
+
+</script>
+
+  </body>
+</html>

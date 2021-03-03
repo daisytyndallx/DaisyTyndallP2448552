@@ -16,6 +16,30 @@
    <img src="Image/daisydiaries.png">
  </div>
 
+ <h1>Quiz your self on my favorite series!</h1>
+<div class="flex-container">
+ <div class="harrypotter">
+  <a href="harrypotter.html">
+  <img src="Image/harrypotter.jpg">
+  <p>Harry Potter</p>
+  </a>
+ </div>
+ <div class="percyjacson">
+  <img src="Image/percyjacson.jpg">
+  <p>Percy Jacson</p>
+ </div>
+</div>
+<div class="flex-container">
+ <div class="clary">
+  <img src="Image/clary.jpg">
+  <p>Mortal Instrument</p>
+ </div>
+ <div class="aelin">
+  <img src="Image/Aelin_by_Morgana0anagrom.jpg">
+  <p>Throne of Glass</p>
+ </div>
+</div>
+
  <nav>
    <div id="mySidenav" class="sidenav">
     <div class="menu">
@@ -27,31 +51,32 @@
     </div>
   </div>
  </nav>
- </div>
- <div class="openbutton">
-  <span style="font-size:30px;cursor:pointer;font-family:cursive;" onclick="openNav()">Menu</span>
- </div>
+
+</div>
+<div class="openbutton">
+ <span style="font-size:30px;cursor:pointer;font-family:cursive;" onclick="openNav()">Menu</span>
+</div>
 
  <script>
- /* Transition JS */
- window.onload = () => {
- const anchors = document.querySelectorAll('a');
- const transition_el = document.querySelector('.transition');
+  /* Transition JS */
+  window.onload = () => {
+  const anchors = document.querySelectorAll('a');
+  const transition_el = document.querySelector('.transition');
 
- setTimeout(() => {
-   transition_el.classList.remove('is-active');
- }, 750);
- }
+  setTimeout(() => {
+    transition_el.classList.remove('is-active');
+  }, 750);
+  }
 
- /* Menu JS*/
- if(window.innerWidth > 540){
-   function openNav() {
-   document.getElementById("mySidenav").style.width = "250px";
- }
- function closeNav() {
-   document.getElementById("mySidenav").style.width = "0";
- }
- }
+  /* Menu JS*/
+  if(window.innerWidth > 540){
+    function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+  }
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+  }
+  }
  </script>
 
   </body>
