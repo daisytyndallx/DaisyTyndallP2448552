@@ -18,31 +18,67 @@
   <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
 
  <ul id="myUL">
+ <div class="flex-container">
+  <div id="Gold" class="review1">
+      <li><a>Chain of Gold<img src="Image/ChainofGold.png"></a></li>
+     <!-- The Modal -->
+      <div id="myModalGold" class="modal">
+       <!-- Modal content -->
+        <div class="modal-content">
+         <span class="close"></span>
+         <p></p>
+        </div>
+      </div>
+  </div>
+  <div id="Silver" class="review2">
+      <li><a >A Court of Silver Flames<img src="Image/CupCakes.png"></a></li>
+      <div id="myModalSilver" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close"></span>
+          <p></p>
+        </div>
+      </div>
+     </div>
+ </div>
    <div class="flex-container">
-     <div class="review1">
-      <li><a href="quiz.html">Chain of Gold<img src="Image/Screenshot 2021-02-07 at 19.13.03.png"></a></li>
-
+    <div id="Honor"class="review3">
+     <li><a>Bound by Honor</a></li>
+     <div id="myModalHonor" class="modal">
+       <div class="modal-content">
+         <span class="close"></span>
+         <p</p>
+       </div>
      </div>
-     <div class="review2">
-      <li><a href="#">A Court of Silver Flames<img src="Image/Screenshot 2021-02-07 at 19.13.03.png"></a></li>
-
+    </div>
+    <div id="Vicious"class="review4">
+     <li><a>Vicious</a></li>
+     <div id="myModalVicious" class="modal">
+       <div class="modal-content">
+         <span class="close"></span>
+         <p></p>
+       </div>
      </div>
+    </div>
    </div>
    <div class="flex-container">
-    <div class="review3">
-     <li><a href="#">Bound by Honor</a></li>
+    <div id="Iron"class="review5">
+      <li><a>Chain of Iron</a></li>
+      <div id="myModalIron" class="modal">
+        <div class="modal-content">
+          <span class="close"></span>
+          <p></p>
+        </div>
+      </div>
     </div>
-    <div class="review4s">
-     <li><a href="#">Vicious</a></li>
-    </div>
-
-   </div>
-   <div class="flex-container">
-    <div class="review5">
-      <li><a href="#">Chain of Iron</a></li>
-    </div>
-    <div class="review6">
-       <li><a href="#">Forever Black</a></li>
+    <div id="Black"class="review6">
+       <li><a>Forever Black</a></li>
+       <div id="myModalBlack" class="modal">
+         <div class="modal-content">
+           <span class="close"></span>
+           <p></p>
+         </div>
+       </div>
     </div>
    </div>
  </ul>
@@ -105,6 +141,52 @@
      }
    }
  }
+
+ // Get the modal
+var modal = document.getElementById("myModalGold");
+// picture that opens the modal
+var btn = document.getElementById("Gold");
+// When the user clicks the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+var modal = document.getElementById("myModalSilver");
+var btn = document.getElementById("Silver");
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+var modal = document.getElementById("myModalHonor");
+var btn = document.getElementById("Honor");
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+var modal = document.getElementById("myModalVicious");
+var btn = document.getElementById("Vicious");
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+var modal = document.getElementById("myModalIron");
+var btn = document.getElementById("Iron");
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+var modal = document.getElementById("myModalBlack");
+var btn = document.getElementById("Black");
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
  </script>
   </body>
 </html>
