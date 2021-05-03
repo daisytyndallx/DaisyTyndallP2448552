@@ -12,8 +12,13 @@
 <div class="wrapper">
 
  <div class="header">
-  <img src="video/HarryPotterWriting.gif">
+  <img src="video/HarryPotterWriting.gif" alt="Harry potter Text">
  </div>
+ <nav class="two">
+    <div class="menu">
+      <a href="quiz.html">Quiz</a>
+    </div>
+  </nav>
 
  <div class="home-box custom-box">
    <h3>Instruction:</h3>
@@ -65,30 +70,19 @@
    <a href="quiz.html"><button type="button" class="btn" onclick="goToHome()">Go To Quiz Page</button></a>
  </div>
 
-    <nav>
-      <div id="mySidenav" class="sidenav">
+    <nav class="one">
        <div class="menu">
-         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a>
          <a href="quiz.html">Quiz</a>
        </div>
-     </div></nav>
+     </nav>
 
 </div>
-<div class="openbutton">
- <span style="font-size:30px;cursor:pointer;font-family:cursive;" onclick="openNav()">Menu</span>
-</div>
+
 
 <script>
- /* Menu JS*/
- if(window.innerWidth > 540){
-   function openNav() {
-   document.getElementById("mySidenav").style.width = "250px";
- }
- function closeNav() {
-   document.getElementById("mySidenav").style.width = "0";
- }
- }
+
 /* Quiz JS */
+/*questions and answers*/
 const quiz = [
  {q: 'What is Harrys Patronas?',
   options:['Stag','Owl','Snake'],
@@ -111,6 +105,7 @@ const quiz = [
   answer:0},
 ]
 
+/*variables that stay the same numbers chaneg based on answrrs*/
 const questionNumber = document.querySelector(".question-number");
 const questionText = document.querySelector(".question-text");
 const optionContainer = document.querySelector(".option-container");
@@ -125,7 +120,7 @@ let availableOptions = [];
 let correctAnswers = 0;
 let attempt = 0;
 
-/* push the questions into availableQuestion*/
+/*get questions from 'quiz' */
 function setAvailableQuestions(){
   const totalQuestion = quiz.length;
   for(let i=0; i<totalQuestion; i++){
@@ -133,27 +128,27 @@ function setAvailableQuestions(){
   }
 }
 
-/* question number and question options */
+/* new question, and number  */
 function getNewQuestion(){
   questionNumber.innerHTML = "Question " + (questionCounter + 1) + " of " + quiz.length;
-/*question text, ramdom question*/
+/*what question test to use, make the questions at random */
   const questionIndex = availableQuestions[Math.floor(Math.random() * availableQuestions.length)]
   currentQuestion = questionIndex;
   questionText.innerHTML = currentQuestion.q;
 /*get the position of questionindex from the avalible questions */
   const index1= availableQuestions.indexOf(questionIndex);
-  /*remove the questionindex from the avaliblequestion, so that the question does not repeat*/
+  /*remove the question used so that the question does not repeat*/
     availableQuestions.splice(index1,1);
-    /*set the options*/
+    /*options for specific questions*/
     const optionLen = currentQuestion.options.length
     for(let i=0; i<optionLen; i++){
       availableOptions.push(i)
     }
     optionContainer.innerHTML = '';
     let animationDelay = 0.15;
-    /* options HTML*/
+
     for(let i=0; i<optionLen; i++){
-      /*ramdom option */
+      /*make options at random*/
       const optonIndex = availableOptions[Math.floor(Math.random() * availableOptions.length)];
       const index2 = availableOptions.indexOf(optonIndex);
 
@@ -172,41 +167,25 @@ function getNewQuestion(){
     questionCounter++
 }
 
-/*get the results */
+/*results */
 function getResult(element){
   const id = parseInt(element.id);
-  /* answer by comparing the id */
+  /* comparing question id */
   if(id === currentQuestion.answer){
-     /*set color green*/
+     /*change colour is correct*/
     element.classList.add("correct");
     correctAnswers++;
     console.log("correct:"+correctAnswers)
   }
   else{
-    /*set color red*/
+    /*change colour is wrong*/
     element.classList.add("wrong");
-
-    /*show the correct option*/
-    const optionLen = optionContainer.children.length;
-    for(let i=0; i<optionLen; i++){
-      if(parseInt(optionContainer.children[i].id) === currentQuestion.answer){
-        optionContainer.children[i].classList.add("correct");
-      }
-    }
   }
-  attempt++;
- unclickableOptions();
 }
 
-/* only select one option */
-function unclickableOptions(){
-   const optionLen = optionContainer.children.length;
-   for(let i=0 ; i<optionLen; i++){
-     optionContainer.children[i].classList.add("already-answered");
-   }
-}
 
-/* next question */
+
+/*  */
 function next(){
   if(questionCounter === quiz.length){
     console.log("quiz over");
@@ -218,9 +197,9 @@ function next(){
 }
 
 function quizOver(){
-  /* hide quiz box */
+  /* change to next box */
   quizBox.classList.add("hide");
-  /*show results*/
+  /* get results box*/
   resultBox.classList.remove("hide");
   quizResult();
 }
@@ -252,10 +231,10 @@ function tryAgainQuiz(){
   startQuiz()
 }
 
-/*quiz start*/
+/*start quiz*/
 function startQuiz(){
 
-   /*hide home box*/
+   /*hide first box*/
    homeBox.classList.add("hide");
    quizBox.classList.remove("hide");
    setAvailableQuestions();

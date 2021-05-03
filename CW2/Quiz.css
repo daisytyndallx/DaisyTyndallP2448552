@@ -22,6 +22,12 @@ h1{
   font-size: 30px;
   font-weight: 500;
 }
+p{
+  font-family: cursive;
+  font-style: italic;
+  font-size: 15px;
+  font-weight: 500;
+}
 .flex-container p{
   font-family: cursive;
   font-style: italic;
@@ -97,6 +103,7 @@ h1{
   padding: 30px;
   border-radius: 50px;
 }
+
 .custom-box::before,
 .custom-box::after{
   content: '';
@@ -277,6 +284,12 @@ h1{
 @media screen and (min-width: 540px) {
   .flex-container{
    display: flex;
+  }
+  p{
+    font-family: cursive;
+    font-style: italic;
+    font-size: 20px;
+    font-weight: 500;
   }
 
 }

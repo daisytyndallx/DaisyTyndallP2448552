@@ -14,13 +14,22 @@
 <div class="wrapper">
 
  <div class="header">
-   <img src="Image/daisydiaries.png">
+   <img src="Image/daisydiaries.png" alt="DaisyDiaries">
  </div>
+ <nav class="two">
+    <div class="menu">
+      <a class="current" shref="homepage.html">Home</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="diary.html">Diary</a>
+      <a href="quiz.html">Quiz</a>
+    </div>
+ </nav>
+
 
  <div class="flex-container">
 
    <div class="intropicture">
-      <img src="Image/Screenshot 2021-02-07 at 13.19.07.png">
+      <img src="Image/me picture .png" alt="daisy selfie">
     <div class="overlay">
       <div class="Description">DaisyTyndall</div>
     </div>
@@ -32,7 +41,7 @@
       on my favorite book and keep a little diary on how my lock down is going!
       my favorite genre is romance (who doesnt.) However, my favorite book series
     has to be ACOTAR! Check out below for a sneakpeak of what ive been up to over
-  lockdown ;)</p>
+  lockdown ;) </br> <a onclick="myAudioFunction('A');"><img src="Image/headphones and books.png" alt="headphones"></a></p>
     </div>
   </div>
 
@@ -40,33 +49,33 @@
 
    <div class="mySlides fade">
     <div class="numbertext">1 / 4</div>
-    <img src="Image/Gin.png" style="width:90%">
+    <img src="Image/Gin.png" alt="Gin can"style="width:90%">
     <div class="text-block">
-     <p>getting drunk!</p>
+     <p>Getting Drunk!</p>
     </div>
    </div>
 
    <div class="mySlides fade">
     <div class="numbertext">2 / 4</div>
-    <img src="Image/CupCakes.png" style="width:90%">
+    <img src="Image/CupCakes.png" alt="Cupcake rose"style="width:90%">
     <div class="text-block">
-    <p>Lots of bakingg!!</p>
+    <p>Lots of Bakingg!!</p>
     </div>
    </div>
 
    <div class="mySlides fade">
     <div class="numbertext">3 / 4</div>
-    <img src="Image/Diet.png" style="width:90%">
+    <img src="Image/Diet.png" alt="Salad on a plate"style="width:90%">
     <div class="text-block">
-    <p>Trying to diet :(</p>
+    <p>Trying to Diet :(</p>
     </div>
    </div>
 
    <div class="mySlides fade">
     <div class="numbertext">4 / 4</div>
-    <img src="Image/Screenshot 2021-02-07 at 19.14.59.png" style="width:90%">
+    <img src="Image/Screenshot 2021-02-07 at 19.14.59.png" alt="Space hopper" style="width:90%">
     <div class="text-block">
-    <p>Space Hopper fun</p>
+    <p>Space Hopper Fun</p>
     </div>
    </div>
 
@@ -77,45 +86,33 @@
      <span class="dot"></span>
      <span class="dot"></span>
    </div>
+   <nav class="one">
+      <div class="menu">
+        <a href="homepage.html">Home</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="diary.html">Diary</a>
+        <a href="quiz.html">Quiz</a>
+      </div>
+   </nav>
 
- <nav>
-   <div id="mySidenav" class="sidenav">
-    <div class="menu">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a>
-      <a href="homepage.html">Home</a>
-      <a href="reviews.html">Reviews</a>
-      <a href="diary.html">Diary</a>
-      <a href="quiz.html">Quiz</a>
-    </div>
-  </div>
- </nav>
 </div>
-<div class="openbutton">
-  <span style="font-size:30px;cursor:pointer;font-family:cursive;" onclick="openNav()">Menu</span>
-</div>
+
 
 <script>
 /* Transition JS */
-window.onload = () => {
-const anchors = document.querySelectorAll('a');
-const transition_el = document.querySelector('.transition');
 
+window.onload = () => {
+//give the first elemnt found that matches selector
+const transition_el = document.querySelector('.transition');
+//how  long it will last for it to then be removed
 setTimeout(() => {
   transition_el.classList.remove('is-active');
-}, 750);
+}, 750);//how long to will be on screen.
 }
 
-/* Menu JS*/
-if(window.innerWidth > 540){
-  function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
-}
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-}
-}
 /* Slide show JS */
 var slideIndex = 0;
+
 showSlides();
 
 function showSlides() {
@@ -132,7 +129,17 @@ function showSlides() {
   }
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 3000); // Change image every 2 seconds
+  setTimeout(showSlides, 3000);
+}
+
+/* audio in an image */
+var aAudio = new Audio("audio/homepagedescription.m4a")
+/*function in html */
+function myAudioFunction(phone){
+  /* play audio when clicked */
+  if(phone =="A"){
+    aAudio.play();
+  }
 }
 </script>
 

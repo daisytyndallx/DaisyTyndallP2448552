@@ -12,8 +12,14 @@
 <div class="wrapper">
 
  <div class="title">
-  <img src="video/PercyJacsonWriting.gif">
+  <img src="video/PercyJacsonWriting.gif" alt="Percy jackson text">
  </div>
+
+ <nav class="two">
+    <div class="menu">
+      <a href="quiz.html">Quiz</a>
+    </div>
+  </nav>
 
  <div class="home-box custom-box">
    <h3>Instruction:</h3>
@@ -65,29 +71,17 @@
    <a href="quiz.html"><button type="button" class="btn" onclick="goToHome()">Go To Quiz Page</button></a>
  </div>
 
-    <nav>
-      <div id="mySidenav" class="sidenav">
-       <div class="menu">
-         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a>
-         <a href="quiz.html">Quiz</a>
-       </div>
-     </div></nav>
+ <nav class="one">
+    <div class="menu">
+      <a href="quiz.html">Quiz</a>
+    </div>
+  </nav>
 
 </div>
-<div class="openbutton">
- <span style="font-size:30px;cursor:pointer;font-family:cursive;" onclick="openNav()">Menu</span>
-</div>
+
 
 <script>
- /* Menu JS*/
- if(window.innerWidth > 540){
-   function openNav() {
-   document.getElementById("mySidenav").style.width = "250px";
- }
- function closeNav() {
-   document.getElementById("mySidenav").style.width = "0";
- }
- }
+
 /* Quiz JS */
 const quiz = [
  {q: 'What colour food does Percys mother always make him?',

@@ -12,128 +12,230 @@
 
 <div class="wrapper">
   <div class="header">
-     <img src="Image/daisydiaries.png">
+     <img src="Image/daisydiaries.png" alt="daisydiaries">
   </div>
+  <nav class="two">
 
-  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+     <div class="menu">
+       <a href="homepage.html">Home</a>
+       <a class="current" href="reviews.html">Reviews</a>
+       <a href="diary.html">Diary</a>
+       <a href="quiz.html">Quiz</a>
+     </div>
+  </nav>
+
+  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Books..">
+
+  <h1>&nearr; Search to find the review you want! &nwarr;</h1>
+
 
  <ul id="myUL">
  <div class="flex-container">
   <div id="Gold" class="review1">
-      <li><a>Chain of Gold<img src="Image/ChainofGold.png"></a></li>
-     <!-- The Modal -->
-      <div id="myModalGold" class="modal">
+      <li><a>Chain of Gold<img src="Image/BOOK pictures for website/ChainofGold.png" alt="chain of gold book">
+        <div class="text-block">CLICK ME!</div></a></li>
+     <!--The Modal-->
+      <div id="myModalGold" class="modal gold">
        <!-- Modal content -->
         <div class="modal-content">
          <span class="close"></span>
-         <p></p>
+
+         <h3> CHAIN OF GOLD <a onclick="myAudioFunction('A');"><img src="Image/headphones and books.png" alt="headphones"></a> </h3>
+
+         <p>Cordelia Carstairs is a Shadowhunter, a warrior trained since childhood
+         to battle demons. When her father is accused of a terrible crime, she
+         and her brother travel to London in hopes of preventing the family’s
+         ruin. Cordelia’s mother wants to marry her off, but Cordelia is
+         determined to be a hero rather than a bride. Soon Cordelia encounters
+         childhood friends James and Lucie Herondale and is drawn into their
+         world of glittering ballrooms, secret assignations, and supernatural
+         salons, where vampires and warlocks mingle with mermaids and magicians.
+         All the while, she must hide her secret love for James, who is sworn
+         to marry someone else. <br/></p>
         </div>
       </div>
   </div>
   <div id="Silver" class="review2">
-      <li><a >A Court of Silver Flames<img src="Image/CupCakes.png"></a></li>
-      <div id="myModalSilver" class="modal">
+      <li><a >A Court of Silver Flames<img src="Image/BOOK pictures for website/Silver.png" alt="court of silver flames book">
+      <div class="text-block">CLICK ME!</div></a></li>
+      <div id="myModalSilver" class="modal silver">
         <!-- Modal content -->
         <div class="modal-content">
           <span class="close"></span>
-          <p></p>
+          <h3> A COURT OF SILVER FLAMES<a onclick="myAudioFunction('B');"><img src="Image/headphones and books.png" alt="headphones"></a></h3>
+        <p>  Nesta Archeron has always been prickly-proud, swift to anger, and slow
+          to forgive. And ever since being forced into the Cauldron and becoming
+          High Fae against her will, she's struggled to find a place for herself
+          within the strange, deadly world she inhabits. Worse, she can't seem
+          to move past the horrors of the war with Hybern and all she lost in it.<br/>
+          The one person who ignites her temper more than any other is Cassian,
+          the battle-scarred warrior whose position in Rhysand and Feyre's Night
+          Court keeps him constantly in Nesta's orbit. But her temper isn't the
+          only thing Cassian ignites. The fire between them is undeniable, and
+          only burns hotter as they are forced into close quarters with each other.<br/></p>
+
+
         </div>
       </div>
      </div>
  </div>
    <div class="flex-container">
-    <div id="Honor"class="review3">
-     <li><a>Bound by Honor</a></li>
-     <div id="myModalHonor" class="modal">
-       <div class="modal-content">
-         <span class="close"></span>
-         <p</p>
-       </div>
+     <div id="Honor" class="review3">
+         <li><a>Bound by Honor<img src="Image/BOOK pictures for website/honor.png" alt="bound by honor book">
+           <div class="text-block">CLICK ME!</div></a></li>
+         <div id="myModalHonor" class="modal honor">
+           <div class="modal-content">
+            <span class="close"></span>
+            <h3> Bound by Honor<a onclick="myAudioFunction('C');"><img src="Image/headphones and books.png" alt="headphones"></a></h3>
+            <p>A modern mafia fairytale.<br/>
+            Born into one of the leading mob families in Chicago, Aria Scuderi is a
+            mafia princess known for her beauty. What many consider a gift means her
+            doom when she’s forced to marry Luca Vitiello to bring peace between two
+            mafia dynasties. Luca is the future Capo of the New York Famiglia, a man
+            known for his brutality—and for crushing his cousin’s throat with his bare hands.<br/>
+           Yet, there’s no escaping the arranged bond, much less a man like Luca.
+           He’d follow her to the end of the world.<br/>
+           A mafia princess known for her beauty given to a monstrous man.<br/>
+           Even monsters have a heart.<br/>
+           She has every intention of working her way into his.<br/></p>
+           </div>
+         </div>
      </div>
-    </div>
+
     <div id="Vicious"class="review4">
-     <li><a>Vicious</a></li>
-     <div id="myModalVicious" class="modal">
+     <li><a>Vicious <img src="Image/BOOK pictures for website/vicious.png" alt="Vicious book">
+     <div class="text-block">CLICK ME!</div></a></li>
+     <div id="myModalVicious" class="modal vicious">
        <div class="modal-content">
          <span class="close"></span>
-         <p></p>
+         <h3> VICIOUS<a onclick="myAudioFunction('D');"><img src="Image/headphones and books.png" alt="headphones"></a></h3>
+         <p>They say love and hate are the same feelings experienced under different
+         circumstances, and it’s true. The man who comes to me in my dreams also
+         haunts me in my nightmares. He is a brilliant lawyer. A skilled criminal.
+         A beautiful liar. A bully and a savior, a monster and a lover.<br/>
+         Ten years ago, he made me run away from the small town where we lived.
+         Now, he came for me in New York, and he isn’t leaving until he takes me
+         with him.</p>
        </div>
      </div>
     </div>
    </div>
    <div class="flex-container">
     <div id="Iron"class="review5">
-      <li><a>Chain of Iron</a></li>
-      <div id="myModalIron" class="modal">
+      <li><a>Chain of Iron <img src="Image/BOOK pictures for website/Iron.png" alt="chain of iron book">
+      <div class="text-block">CLICK ME!</div></a></li>
+      <div id="myModalIron" class="modal iron">
         <div class="modal-content">
           <span class="close"></span>
-          <p></p>
+          <h3> CHAIN OF IRON<a onclick="myAudioFunction('E');"><img src="Image/headphones and books.png" alt="headphones"></a></h3>
+          <p>Cordelia Carstairs seems to have everything she ever wanted. She’s
+          engaged to marry James Herondale, the boy she has loved since childhood.
+          She has a new life in London with her best friend Lucie Herondale and
+          James’s charming companions, the Merry Thieves. She is about to be reunited
+          with her beloved father. And she bears the sword Cortana, a legendary
+          hero’s blade.<br/>
+          But the truth is far grimmer. James and Cordelia’s marriage is a lie,
+          arranged to save Cordelia’s reputation. James is in love with the mysterious
+          Grace Blackthorn whose brother, Jesse, died years ago in a terrible accident.
+          Cortana burns Cordelia’s hand when she touches it, while her father has
+          grown bitter and angry. And a serial murderer is targeting the Shadowhunters
+          of London, killing under cover of darkness, then vanishing without a trace.</p>
         </div>
       </div>
     </div>
     <div id="Black"class="review6">
-       <li><a>Forever Black</a></li>
-       <div id="myModalBlack" class="modal">
+       <li><a>House of Earth and Blood<img src="Image/BOOK pictures for website/Crecsent.png" alt="Crecsent city book">
+       <div class="text-block">CLICK ME!</div></a></li>
+       <div id="myModalBlack" class="modal black">
          <div class="modal-content">
            <span class="close"></span>
-           <p></p>
+           <h3>HOUSE OF EARTH AND BLOOD<a onclick="myAudioFunction('F');"><img src="Image/headphones and books.png" alt="headphones"></a></h3>
+           <p>Bryce Quinlan had the perfect life—working hard all day and partying
+           all night—until a demon murdered her closest friends, leaving her
+           bereft, wounded, and alone. When the accused is behind bars but the
+           crimes start up again, Bryce finds herself at the heart of the investigation.
+           She’ll do whatever it takes to avenge their deaths.<br/>
+           Hunt Athalar is a notorious Fallen angel, now enslaved to the Archangels
+           he once attempted to overthrow. His brutal skills and incredible strength
+           have been set to one purpose—to assassinate his boss’s enemies,
+           no questions asked. But with a demon wreaking havoc in the city,
+           he’s offered an irresistible deal: help Bryce find the murderer,
+           and his freedom will be within reach.</p>
          </div>
        </div>
     </div>
    </div>
  </ul>
 
- <nav>
-   <div id="mySidenav" class="sidenav">
+ <nav class="one">
     <div class="menu">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a>
       <a href="homepage.html">Home</a>
       <a href="reviews.html">Reviews</a>
       <a href="diary.html">Diary</a>
       <a href="quiz.html">Quiz</a>
     </div>
-  </div>
  </nav>
  </div>
- <div class="openbutton">
-  <span style="font-size:30px;cursor:pointer;font-family:cursive;" onclick="openNav()">Menu</span>
- </div>
+
 
 
 <script>
  /* Transition JS */
  window.onload = () => {
- const anchors = document.querySelectorAll('a');
  const transition_el = document.querySelector('.transition');
-
  setTimeout(() => {
    transition_el.classList.remove('is-active');
  }, 750);
  }
 
- /* Menu JS*/
- if(window.innerWidth > 540){
-   function openNav() {
-   document.getElementById("mySidenav").style.width = "250px";
- }
- function closeNav() {
-   document.getElementById("mySidenav").style.width = "0";
- }
- }
+ /* audio in an image */
+ var aAudio = new Audio("audio/homepagedescription.m4a");
+ var bAudio = new Audio("audio/homepagedescription.m4a");
+ var cAudio = new Audio("audio/homepagedescription.m4a");
+ var dAudio = new Audio("audio/homepagedescription.m4a");
+ var eAudio = new Audio("audio/homepagedescription.m4a");
+ var fAudio = new Audio("audio/homepagedescription.m4a");
+ /*function in html */
+ function myAudioFunction(phone){
+   /* play audio when clicked */
+   if(phone =="A"){
+     aAudio.play();
+   }
+   else if(phone =="B"){
+     bAudio.play();
+   }
+   else if(phone =="C"){
+     cAudio.play();
+   }
+   else if(phone =="D"){
+     dAudio.play();
+   }
+   else if(phone =="E"){
+     eAudio.play();
+   }
+   else if(phone =="F"){
+     fAudio.play();
+   }
+}
 
  /*Review list JS*/
  function myFunction() {
    // Declare variables
    var input, filter, ul, li, a, i, txtValue;
    input = document.getElementById('myInput');
+   //convert whats user imputs to uppercase
    filter = input.value.toUpperCase();
+    //(ul = unorder list) - use the items in the myUL ID (unorder list)
    ul = document.getElementById("myUL");
+   // (li = Indervidual points on ul)
    li = ul.getElementsByTagName('li');
 
    // Loop through all list items, and hide those who don't match the search query
    for (i = 0; i < li.length; i++) {
+
      a = li[i].getElementsByTagName("a")[0];
      txtValue = a.textContent || a.innerText;
+     // make all elements uppercase, if text filter found return higher that -1
      if (txtValue.toUpperCase().indexOf(filter) > -1) {
        li[i].style.display = "";
      } else {
@@ -142,49 +244,66 @@
    }
  }
 
- // Get the modal
-var modal = document.getElementById("myModalGold");
-// picture that opens the modal
+ /* Getting modal*/
+var modalgold = document.getElementById("myModalGold");
+// picture or text that opens the modal
 var btn = document.getElementById("Gold");
-// When the user clicks the button, open the modal
+// make modal visible when clicked
 btn.onclick = function() {
-  modal.style.display = "block";
+  modalgold.style.display = "block";
 }
 
-var modal = document.getElementById("myModalSilver");
+var modalsilver = document.getElementById("myModalSilver");
 var btn = document.getElementById("Silver");
 btn.onclick = function() {
-  modal.style.display = "block";
+  modalsilver.style.display = "block";
 }
 
-var modal = document.getElementById("myModalHonor");
+var modalhonor = document.getElementById("myModalHonor");
 var btn = document.getElementById("Honor");
 btn.onclick = function() {
-  modal.style.display = "block";
+  modalhonor.style.display = "block";
 }
 
-var modal = document.getElementById("myModalVicious");
+var modalvicious = document.getElementById("myModalVicious");
 var btn = document.getElementById("Vicious");
 btn.onclick = function() {
-  modal.style.display = "block";
+  modalvicious.style.display = "block";
 }
 
-var modal = document.getElementById("myModalIron");
+var modaliron = document.getElementById("myModalIron");
 var btn = document.getElementById("Iron");
 btn.onclick = function() {
-  modal.style.display = "block";
+  modaliron.style.display = "block";
 }
 
-var modal = document.getElementById("myModalBlack");
+var modalblack = document.getElementById("myModalBlack");
 var btn = document.getElementById("Black");
 btn.onclick = function() {
-  modal.style.display = "block";
+  modalblack.style.display = "block";
 }
 
-// When the user clicks anywhere outside of the modal, close it
+// close modal when click out side when not clicking onthe buton
 window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
+  //the event triggers the display to change
+  if (event.target == modalgold) {
+    modalgold.style.display = "none";
+  }
+  if (event.target == modalsilver) {
+    modalsilver.style.display = "none";
+  }
+  if (event.target == modalhonor) {
+    modalhonor.style.display = "none";
+  }
+  if (event.target == modalvicious) {
+    modalvicious.style.display = "none";
+  }
+  if (event.target == modaliron) {
+    modaliron.style.display = "none";
+  }
+  if (event.target == modalblack)
+   {
+    modalblack.style.display = "none";
   }
 }
  </script>

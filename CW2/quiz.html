@@ -13,60 +13,65 @@
 <div class="wrapper">
 
  <div class="header">
-   <img src="Image/daisydiaries.png">
+   <img src="Image/daisydiaries.png" alt="daisydiaries">
  </div>
+ <nav class="two">
 
- <h1>Quiz your self on my favorite series!</h1>
+    <div class="menu">
+      <a href="homepage.html">Home</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="diary.html">Diary</a>
+      <a class="current" href="quiz.html">Quiz</a>
+    </div>
+ </nav>
+
+ <h1>&searr; Click the pictures below &swarr;</h1>
+ <p> and quiz your self on my favorite book series</p>
 <div class="flex-container">
  <div class="harrypotter">
+   <!--putting a picture as a link, including the text-->
   <a href="harrypotter.html">
-  <img src="Image/harrypotter.jpg">
+  <img src="Image/harrypotter.jpg" alt="Harry potter fan art">
   <p>Harry Potter</p>
   </a>
  </div>
  <div class="percyjacson">
   <a href="percyjacson.html">
-  <img src="Image/percyjacson.jpg">
+  <img src="Image/percyjacson.jpg" alt="percy jackson fan art">
   <p>Percy Jacson</p>
   </a>
  </div>
 </div>
 <div class="flex-container">
- <a href="MI.html">
  <div class="clary">
-  <img src="Image/claryF.jpg">
+   <a href="MI.html">
+  <img src="Image/claryF.jpg" alt="Clary fan art">
   <p>Mortal Instrument</p>
-</a>
+   </a>
  </div>
  <div class="aelin">
   <a href="ToG.html">
-  <img src="Image/Aelin_by_Morgana0anagrom.jpg">
+  <img src="Image/Aelin_by_Morgana0anagrom.jpg" alt="aelin fan art">
   <p>Throne of Glass</p>
   </a>
  </div>
 </div>
 
- <nav>
-   <div id="mySidenav" class="sidenav">
-    <div class="menu">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a>
-      <a href="homepage.html">Home</a>
-      <a href="reviews.html">Reviews</a>
-      <a href="diary.html">Diary</a>
-      <a href="quiz.html">Quiz</a>
-    </div>
-  </div>
- </nav>
+<nav class="one">
 
-</div>
-<div class="openbutton">
- <span style="font-size:30px;cursor:pointer;font-family:cursive;" onclick="openNav()">Menu</span>
+   <div class="menu">
+     <a href="homepage.html">Home</a>
+     <a href="reviews.html">Reviews</a>
+     <a href="diary.html">Diary</a>
+     <a href="quiz.html">Quiz</a>
+   </div>
+</nav>
+
 </div>
 
  <script>
   /* Transition JS */
   window.onload = () => {
-  const anchors = document.querySelectorAll('a');
   const transition_el = document.querySelector('.transition');
 
   setTimeout(() => {
@@ -74,15 +79,6 @@
   }, 750);
   }
 
-  /* Menu JS*/
-  if(window.innerWidth > 540){
-    function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-  }
-  function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-  }
-  }
  </script>
 
   </body>

@@ -14,8 +14,17 @@
 <div class="wrapper">
 
  <div class="header">
-   <img src="Image/daisydiaries.png">
+   <img src="Image/daisydiaries.png" alt="daisydiaries">
  </div>
+ <nav class="two">
+
+    <div class="menu">
+      <a href="homepage.html">Home</a>
+      <a href="reviews.html">Reviews</a>
+      <a class="current" href="diary.html">Diary</a>
+      <a href="quiz.html">Quiz</a>
+    </div>
+ </nav>
 
  <div class="book">
      <input type="checkbox" id="c1">
@@ -23,25 +32,29 @@
      <input type="checkbox" id="c3">
      <input type="checkbox" id="c4">
      <input type="checkbox" id="c5">
-     <input type="checkbox" id="c6">
-    <div class="cover"id="cover"><img src="Image/Screenshot 2021-02-07 at 13.19.07.png"></div>
-   <div class="flip-book">
-      <div class="flip" id="p1">
-        <div class="front">
+
+
+     <!--seprate front cover picture, not linked to the book-->
+    <div class="cover"id="cover"><img src="Image/daisy-heart-gaetano-chieffo.jpg" alt="daisy flower"></div>
+  <div class="flip-book">
+        <!-- first page will rotate to show back -->
+    <div class="flip" id="p1">
+      <div class="front">
           <h1>Daisys</h1>
           <h1>LockDown</h1>
           <h1>Diary</h1>
-
+           <!-- for="" to identifly what back is for what front pag-->
           <label class="next-btn" for="c1">Next</label>
-        </div>
+      </div>
+         <!--back of the first page of book -->
         <div class="back">
-          <img src="Image/sushi night.jpg">
+          <img src="Image/sushi night.jpg" alt="Group picture outside">
           <label class="back-btn" for="c1">Back</label>
         </div>
       </div>
       <div class="flip" id="p2">
         <div class="front">
-          <h2>Sushi Night</h2>
+          <h2> Sushi Night <a onclick="myAudioFunction('A');"><img src="Image/headphones and books.png" alt="headphones"></a></h2>
           <p> When we can’t go out for diner or go to a bar why not bring it to
              us !!! having been in lockdown for so long and missing going out my
               house mates and I decided to order some sushi and make some
@@ -51,88 +64,74 @@
           <label class="next-btn" for="c2">Next</label>
         </div>
         <div class="back">
-          <img src="Image/Diet.png">
+          <img src="Image/Diet.png" alt="salad on a plate">
           <label class="back-btn" for="c2">Back</label>
         </div>
       </div>
       <div class="flip" id="p3">
         <div class="front">
-          <h2>Diet</h2>
-          <p> kscvsb vadjkfb adfjkbv adfjkbv adfjbv  adfhbv adfbkv adfhjkv a
-              sdflgv fdsjnv sfjn sfjn sjfnv rsoinfjv srfjnv sdnv soedlknxv
-              sdkjnfvmsdknlv
+          <h2>Diet <a onclick="myAudioFunction('B');"><img src="Image/headphones and books.png" alt="headphones"></a></h2>
+          <p>So I started couch to 5K (the devil in desguise.) The LockDown
+            weight needs to go. I'm trying to eat healthier and have less takeaways :(
+            I miss crisps and sweets, but lucky enough I love friut and salad.
+            just normaly i have it with extras .
           </p>
           <label class="next-btn" for="c3">Next</label>
         </div>
         <div class="back">
-          <img src="Image/CupCakes.png">
+          <img src="Image/CupCakes.png" alt="cupcake">
           <label class="back-btn" for="c3">Back</label>
         </div>
       </div>
       <div class="flip" id="p4">
         <div class="front">
-          <h2>Baking</h2>
-          <p> kscvsb vadjkfb adfjkbv adfjkbv adfjbv  adfhbv adfbkv adfhjkv a
-              sdflgv fdsjnv sfjn sfjn sjfnv rsoinfjv srfjnv sdnv soedlknxv
-              sdkjnfvmsdknlv
+          <h2>Baking <a onclick="myAudioFunction('C');"><img src="Image/headphones and books.png" alt="headphones"></a></h2>
+          <p> So in second year I used baking as an excape to destresssss!
+            unfortunatly or fortunatly depending the wqy you look at it over lock
+            down it became the souce of my stress:D. This was due to me trying to
+            perfect my recipes, get the perfect rose iced cake or best brownies
+            that ever did exist. So now I love baking and creating new things but
+            its looking like I need to find a my de-stresser for this year!
           </p>
           <label class="next-btn" for="c4">Next</label>
         </div>
         <div class="back">
-          <img src="Image/.png">
+          <img src="Image/BBQ.png" alt="group picture outsdie">
           <label class="back-btn" for="c4">Back</label>
         </div>
       </div>
       <div class="flip" id="p5">
         <div class="front">
-          <h2>3rd Year</h2>
-          <p> kscvsb vadjkfb adfjkbv adfjkbv adfjbv  adfhbv adfbkv adfhjkv a
-              sdflgv fdsjnv sfjn sfjn sjfnv rsoinfjv srfjnv sdnv soedlknxv
-              sdkjnfvmsdknlv
-          </p>
-          <label class="next-btn" for="c5">Next</label>
-        </div>
-        <div class="back">
-          <img src="Image.png">
-          <label class="back-btn" for="c5">Back</label>
-        </div>
-      </div>
-      <div class="flip" id="p6">
-        <div class="front">
-          <h2>BBQ</h2>
-          <p> kscvsb vadjkfb adfjkbv adfjkbv adfjbv  adfhbv adfbkv adfhjkv a
-              sdflgv fdsjnv sfjn sfjn sjfnv rsoinfjv srfjnv sdnv soedlknxv
-              sdkjnfvmsdknlv
+          <h2>BBQ <a onclick="myAudioFunction('D');"><img src="Image/headphones and books.png" alt="headphones"></a></h2>
+          <p> So.... <br/> it was the hotest days of the year and what better way to
+            get some sun than to have a BBQ. It was my first BBQ being a vegitarian
+            so was a diffrent experience, no chicken strips for me :(. However
+            i found the best alternative bugers. obviousluy i done the cooking
+            everyone knows my grilling skills cant be beaten!
           </p>
         </div>
-        <div class="back">
-          <label class="back-btn" for="c6">Back</label>
-        </div>
+
       </div>
+
    </div>
 
- </div>
+</div>
 
- <nav>
-   <div id="mySidenav" class="sidenav">
+ <nav class="one">
+
     <div class="menu">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a>
       <a href="homepage.html">Home</a>
       <a href="reviews.html">Reviews</a>
       <a href="diary.html">Diary</a>
       <a href="quiz.html">Quiz</a>
     </div>
-  </div>
  </nav>
 </div>
-<div class="openbutton">
-  <span style="font-size:30px;cursor:pointer;font-family:cursive;" onclick="openNav()">Menu</span>
-</div>
+
 
 <script>
 /* Transition JS */
 window.onload = () => {
-const anchors = document.querySelectorAll('a');
 const transition_el = document.querySelector('.transition');
 
 setTimeout(() => {
@@ -148,6 +147,27 @@ if(window.innerWidth > 540){
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
 }
+}
+/* audio in an image */
+var aAudio = new Audio("audio/homepagedescription.m4a");
+var bAudio = new Audio("audio/homepagedescription.m4a");
+var cAudio = new Audio("audio/homepagedescription.m4a");
+var dAudio = new Audio("audio/homepagedescription.m4a");
+/*function in html */
+function myAudioFunction(phone){
+  /* play audio when clicked */
+  if(phone =="A"){
+    aAudio.play();
+  }
+  else if(phone =="B"){
+    bAudio.play();
+  }
+  else if(phone =="C"){
+    cAudio.play();
+  }
+  else if(phone =="D"){
+    dAudio.play();
+  }
 }
 </script>
 
